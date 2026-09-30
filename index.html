@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChamoSmoke</title>
+
+    <!-- LOGO DE LA PESTAÑA (favicon), incrustado en el propio HTML -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <link rel="apple-touch-icon" href="fotos/favicon-192.png?v=2">
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">ChamoSmoke</a>
+
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#como-pedir">Cómo pedir</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <a class="boton boton-nav" href="https://wa.me/51929500357" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+
+        </nav>
+    </header>
+
+
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+
+        <div class="inicio-contenido">
+
+            <p class="pequeno">TIENDA DE VAPES</p>
+
+            <h1>Vapes desechables y recargables, directo a tu WhatsApp</h1>
+
+            <p>
+                Elige tu categoría, escoge tu producto y haz tu pedido en minutos.
+                Productos de calidad y atención cercana.
+            </p>
+
+            <div class="acciones">
+                <a href="#productos" class="boton">Ver productos</a>
+                <a href="https://wa.me/51929500357" class="boton boton-borde" target="_blank" rel="noopener">Escríbenos</a>
+            </div>
+
+            <ul class="confianza">
+                <li>Atención directa por WhatsApp</li>
+                <li>Pedido en pocos pasos</li>
+                <li>Variedad de marcas</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="seccion">
+
+        <div class="contenedor">
+
+            <h2>Sobre ChamoSmoke</h2>
+
+            <p>
+                Somos un emprendimiento dedicado a ofrecer vapes seleccionados con cuidado
+                y a brindar una buena experiencia a cada cliente.
+            </p>
+
+            <div class="valores">
+                <div class="valor">
+                    <h3>Variedad</h3>
+                    <p>Desechables de distintos rangos de puff y recargables de marcas conocidas.</p>
+                </div>
+                <div class="valor">
+                    <h3>Atención cercana</h3>
+                    <p>Te respondemos directo por WhatsApp, sin intermediarios ni complicaciones.</p>
+                </div>
+                <div class="valor">
+                    <h3>Pedido sencillo</h3>
+                    <p>Elige tu producto en la página y nos llega tu pedido listo para coordinar.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="seccion productos">
+
+        <div class="contenedor">
+
+            <h2>Nuestros productos</h2>
+
+            <p class="descripcion">
+                Conoce algunos de los productos que tenemos disponibles.
+            </p>
+
+            <div class="productos-grid">
+
+                <div class="producto">
+                    <div class="producto-imagen">
+                        <img src="fotos/imagen2 (2).png" alt="Desechables">
+                    </div>
+
+                    <h3>Desechables</h3>
+
+                    <p>
+                        Vapes desechables, buenos sabores y calidad.
+                    </p>
+
+                    <a href="#detalle-1" class="boton boton-chico">Ver más</a>
+                </div>
+
+
+                <div class="producto">
+                    <div class="producto-imagen">
+                        <img src="fotos/imagen2 (1).png" alt="Recargables">
+                    </div>
+
+                    <h3>Recargables</h3>
+
+                    <p>
+                        Vapes recargables, calidad, variedad de sabores y buena durabilidad.
+                    </p>
+
+                    <a href="#detalle-2" class="boton boton-chico">Ver más</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DETALLE PRODUCTO 1 (solo se ve al elegirlo) -->
+    <section id="detalle-1" class="seccion detalle">
+        <div class="contenedor">
+
+            <a href="#productos" class="volver">← Volver a productos</a>
+
+            <div class="detalle-grid">
+
+                <div class="detalle-imagen">
+                    <img src="fotos/imagen2 (2).png" alt="Desechables">
+                </div>
+
+                <div class="detalle-info">
+                    <h2>Desechables</h2>
+
+                    <p>
+                        Vapes desechables con buenos sabores y calidad. Aquí puedes
+                        agregar más detalles: puffs, sabores disponibles, etc.
+                    </p>
+
+                    <h3 class="disponibles-titulo">Disponibles</h3>
+
+                    <ul class="disponibles">
+                        <li class="item">
+                            <span class="item-nombre">Desechable de 1000 - 4500 puff</span>
+                            <a class="boton boton-item" href="https://wa.me/51929500357?text=Hola,%20quiero%20pedir%20Desechable%20de%201000%20-%204500%20puff" target="_blank" rel="noopener">Pedir</a>
+                        </li>
+                        <li class="item">
+                            <span class="item-nombre">Desechable de 5000 - 20000 puff</span>
+                            <a class="boton boton-item" href="https://wa.me/51929500357?text=Hola,%20quiero%20pedir%20Desechable%20de%205000%20-%2020000%20puff" target="_blank" rel="noopener">Pedir</a>
+                        </li>
+                        <li class="item">
+                            <span class="item-nombre">Desechable de 20000 - 45000 puff</span>
+                            <a class="boton boton-item" href="https://wa.me/51929500357?text=Hola,%20quiero%20pedir%20Desechable%20de%2020000%20-%2045000%20puff" target="_blank" rel="noopener">Pedir</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DETALLE PRODUCTO 2 -->
+    <section id="detalle-2" class="seccion detalle">
+        <div class="contenedor">
+
+            <a href="#productos" class="volver">← Volver a productos</a>
+
+            <div class="detalle-grid">
+
+                <div class="detalle-imagen">
+                    <img src="fotos/imagen2 (1).png" alt="Recargables">
+                </div>
+
+                <div class="detalle-info">
+                    <h2>Recargables</h2>
+
+                    <p>
+                        Vapes recargables con calidad, variedad de sabores y buena
+                        durabilidad. Aquí puedes agregar más detalles del producto.
+                    </p>
+
+                    <h3 class="disponibles-titulo">Disponibles</h3>
+
+                    <ul class="disponibles">
+                        <li class="item">
+                            <span class="item-nombre">Recargable Life Pod</span>
+                            <a class="boton boton-item" href="https://wa.me/51929500357?text=Hola,%20quiero%20pedir%20Recargable%20Life%20Pod" target="_blank" rel="noopener">Pedir</a>
+                        </li>
+                        <li class="item">
+                            <span class="item-nombre">Recargable STLTH</span>
+                            <a class="boton boton-item" href="https://wa.me/51929500357?text=Hola,%20quiero%20pedir%20Recargable%20STLTH" target="_blank" rel="noopener">Pedir</a>
+                        </li>
+                        <li class="item">
+                            <span class="item-nombre">Recargable Dragbar</span>
+                            <a class="boton boton-item" href="https://wa.me/51929500357?text=Hola,%20quiero%20pedir%20Recargable%20Dragbar" target="_blank" rel="noopener">Pedir</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CÓMO PEDIR -->
+    <section id="como-pedir" class="seccion pasos-seccion">
+
+        <div class="contenedor">
+
+            <h2>Cómo pedir</h2>
+
+            <p>Hacer tu pedido toma menos de un minuto.</p>
+
+            <ol class="pasos">
+                <li>
+                    <h3>Elige una categoría</h3>
+                    <p>Desechables o recargables, según lo que busques.</p>
+                </li>
+                <li>
+                    <h3>Selecciona tu producto</h3>
+                    <p>Revisa la lista disponible y presiona Pedir en el que quieras.</p>
+                </li>
+                <li>
+                    <h3>Confirma por WhatsApp</h3>
+                    <p>Te llega el mensaje listo y coordinamos tu compra contigo.</p>
+                </li>
+            </ol>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion contacto">
+
+        <div class="contenedor">
+
+            <h2>Haz tu pedido</h2>
+
+            <p>
+                ¿Tienes dudas o quieres consultar disponibilidad?
+                Escríbenos y te atendemos por WhatsApp.
+            </p>
+
+            <a class="boton boton-grande" href="https://wa.me/51929500357" target="_blank" rel="noopener">
+                Escribir al +51 929 500 357
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <div class="pie-contenido">
+
+            <div>
+                <strong class="pie-logo">ChamoSmoke</strong>
+                <p class="pie-texto">Vapes desechables y recargables.</p>
+            </div>
+
+            <ul class="pie-enlaces">
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#como-pedir">Cómo pedir</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </div>
+
+        <p class="aviso">
+            Venta exclusiva a mayores de 18 años. Los productos con nicotina generan adicción.
+        </p>
+
+        <p class="copyright">© 2026 ChamoSmoke. Todos los derechos reservados.</p>
+
+    </footer>
+
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a class="wa-flotante" href="https://wa.me/51929500357" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+        WhatsApp
+    </a>
+
+
+    <!-- VERIFICACIÓN DE EDAD -->
+    <div id="edad" class="edad" role="dialog" aria-modal="true" aria-labelledby="edadTitulo">
+        <div class="edad-caja">
+            <h2 id="edadTitulo">¿Eres mayor de 18 años?</h2>
+            <p>Este sitio vende productos con nicotina y es solo para mayores de edad.</p>
+            <div class="acciones">
+                <button id="edadSi" class="boton">Sí, soy mayor de 18</button>
+                <button id="edadNo" class="boton boton-borde">No</button>
+            </div>
+            <p id="edadMensaje" class="edad-mensaje"></p>
+        </div>
+    </div>
+
+
+    <script src="dinamica.js"></script>
+
+</body>
+</html>
